@@ -1,0 +1,77 @@
+/* ============================================
+   R.L. SIMMONS BUILDER — Services Page
+   ============================================ */
+
+/* --- Service Blocks --- */
+.service-block {
+  padding: var(--space-xl) 0;
+}
+
+.service-block + .service-block {
+  border-top: none;
+}
+
+.service-block__content h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.service-block__content .eyebrow {
+  margin-bottom: 0.5em;
+}
+
+.service-block__content p {
+  color: var(--aged-iron);
+  margin-bottom: 0.75em;
+}
+
+.service-block__content ul {
+  margin: var(--space-sm) 0;
+  padding-left: 0;
+}
+
+.service-block__content li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: var(--text-sm);
+  color: var(--aged-iron);
+}
+
+.service-block__content li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  background: var(--copper);
+  transform: rotate(45deg);
+}
+
+.service-block__image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.service-block__image .placeholder-img {
+  aspect-ratio: 4 / 3;
+}
+
+/* --- Services CTA --- */
+.services-cta {
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.services-cta h2 {
+  color: white;
+  margin-bottom: var(--space-xs);
+}
+
+.services-cta p {
+  color: rgba(255,255,255,0.8);
+  font-size: var(--text-lg);
+  max-width: 600px;
+  margin: 0 auto var(--space-md);
+}

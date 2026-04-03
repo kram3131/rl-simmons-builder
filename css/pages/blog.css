@@ -1,0 +1,131 @@
+/* ============================================
+   R.L. SIMMONS BUILDER — Blog Page
+   ============================================ */
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+}
+
+@media (min-width: 1024px) {
+  .blog-layout {
+    grid-template-columns: 1fr 320px;
+  }
+}
+
+/* --- Blog Post Cards --- */
+.blog-post {
+  padding-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-bottom: var(--border-subtle);
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.blog-post__image {
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: var(--space-md);
+}
+
+.blog-post__image .placeholder-img {
+  aspect-ratio: 16 / 9;
+}
+
+.blog-post__date {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--creek-stone);
+  margin-bottom: 0.5em;
+}
+
+.blog-post__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  transition: color var(--transition-fast);
+}
+
+.blog-post__title:hover {
+  color: var(--copper);
+}
+
+.blog-post__excerpt {
+  color: var(--aged-iron);
+  margin-bottom: var(--space-sm);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Sidebar --- */
+.blog-sidebar {
+  height: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .blog-sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-md));
+  }
+}
+
+.sidebar-block {
+  margin-bottom: var(--space-lg);
+}
+
+.sidebar-block h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--copper);
+  margin-bottom: var(--space-sm);
+  padding-bottom: 0.5em;
+  border-bottom: var(--border-subtle);
+}
+
+.sidebar-block ul li {
+  margin-bottom: 0.6em;
+}
+
+.sidebar-block ul a {
+  font-size: var(--text-sm);
+  color: var(--aged-iron);
+  transition: color var(--transition-fast);
+}
+
+.sidebar-block ul a:hover {
+  color: var(--copper);
+}
+
+/* Sidebar CTA */
+.sidebar-cta {
+  background: var(--deep-moss);
+  padding: var(--space-md);
+  border-radius: 2px;
+  text-align: center;
+}
+
+.sidebar-cta h4 {
+  color: white !important;
+  border-bottom: none !important;
+  margin-bottom: 0.5em !important;
+}
+
+.sidebar-cta p {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  margin-bottom: var(--space-sm);
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | R.L. Simmons Builder</title>
+  <meta name="description" content="Browse R.L. Simmons Builder's portfolio of custom homes, ranch conversions, remodels, and land development projects across the Texas Hill Country.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/projects.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html">R.L. Simmons<span class="wordmark-suffix">Builder</span></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta">Free Consultation</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero hero--shortest hero--parallax" style="background-image: url('images/hero/projects-hero.jpg'); background-color: var(--charcoal);">
+      <div class="hero__overlay"></div>
+      <div class="hero__content container" style="text-align: center; max-width: 100%;">
+        <p class="eyebrow hero-animate hero-animate--1">Portfolio</p>
+        <h1 class="hero-animate hero-animate--2" style="font-size: clamp(2rem, 4vw, 3.5rem);">Our Work</h1>
+        <p class="hero-animate hero-animate--3">Each project tells its own story. Browse by category to see the range of what we build.</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section--lg">
+      <div class="container">
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="new-build">New Builds</button>
+          <button class="filter-tab" data-filter="remodel">Remodels</button>
+          <button class="filter-tab" data-filter="ranch-conversion">Ranch Conversions</button>
+          <button class="filter-tab" data-filter="land-development">Land Development</button>
+        </div>
+
+        <!-- Project Cards (rendered by JS) -->
+        <div class="projects-grid" id="projects-grid">
+          <!-- Cards injected by projects-gallery.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="parallax-section" style="background-image: url('images/hero/projects-cta.jpg'); background-color: var(--deep-moss);">
+      <div class="parallax-section__overlay"></div>
+      <div class="parallax-section__content container reveal">
+        <h2>Your Project Could Be Next</h2>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: var(--space-md); font-size: var(--text-lg);">Let's talk about what you have in mind.</p>
+        <a href="contact.html" class="btn btn--primary btn--lg">Schedule Your Free Consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Project Modal -->
+  <div class="project-modal" id="project-modal">
+    <button class="project-modal__close" aria-label="Close">&times;</button>
+    <div class="project-modal__content">
+      <div class="project-modal__header"></div>
+      <div class="phase-tabs"></div>
+      <div class="modal-gallery"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-wordmark">R.L. Simmons <span>Builder</span></div>
+          <p class="footer-tagline">Premium custom homes and ranch construction in the Texas Hill Country.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Randy</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <p>Harper, Fredericksburg, Kerrville, Mason, Llano, Junction, and the greater Texas Hill Country region.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><a href="tel:8303771923">(830) 377-1923</a></li>
+            <li><a href="mailto:Randy@RLSimmonsBuilder.com">Randy@RLSimmonsBuilder.com</a></li>
+            <li>Harper, TX</li>
+          </ul>
+          <div style="margin-top: var(--space-sm);"><a href="contact.html" class="btn btn--primary btn--sm">Free Consultation</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 R.L. Simmons Builder LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/projects-gallery.js"></script>
+</body>
+</html>

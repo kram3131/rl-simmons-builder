@@ -1,0 +1,214 @@
+/* ============================================
+   R.L. SIMMONS BUILDER — Design Tokens & Base
+   ============================================ */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* --- Color Palette --- */
+:root {
+  --deep-moss:     #2C3E2D;
+  --deep-moss-rgb: 44, 62, 45;
+  --limestone:     #E8E0D4;
+  --limestone-rgb: 232, 224, 212;
+  --aged-iron:     #4A4238;
+  --aged-iron-rgb: 74, 66, 56;
+  --copper:        #B87333;
+  --copper-light:  #D4956B;
+  --copper-rgb:    184, 115, 51;
+  --warm-white:    #FAF7F2;
+  --warm-white-rgb:250, 247, 242;
+  --creek-stone:   #9B8F80;
+  --creek-stone-rgb:155, 143, 128;
+  --charcoal:      #1A1A18;
+  --charcoal-rgb:  26, 26, 24;
+  --sage:          #7A8B6F;
+  --parchment:     #F0EBE0;
+  --parchment-rgb: 240, 235, 224;
+
+  /* --- Typography --- */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Source Sans 3', 'Segoe UI', sans-serif;
+  --font-accent:  'Cormorant Garamond', Georgia, serif;
+
+  --text-base:    18px;
+  --text-sm:      0.875rem;
+  --text-xs:      0.75rem;
+  --text-lg:      1.125rem;
+  --text-xl:      1.25rem;
+  --line-height:  1.7;
+
+  /* --- Spacing --- */
+  --space-xs:   0.5rem;
+  --space-sm:   1rem;
+  --space-md:   2rem;
+  --space-lg:   4rem;
+  --space-xl:   6rem;
+  --space-2xl:  8rem;
+
+  /* --- Layout --- */
+  --container-max: 1280px;
+  --container-narrow: 900px;
+  --header-height: 80px;
+
+  /* --- Transitions --- */
+  --ease-out:    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+  --transition-fast:   0.2s var(--ease-out);
+  --transition-medium: 0.4s var(--ease-out);
+  --transition-slow:   0.7s var(--ease-out);
+
+  /* --- Borders & Shadows --- */
+  --border-subtle: 1px solid rgba(var(--creek-stone-rgb), 0.3);
+  --shadow-sm:  0 2px 8px rgba(var(--charcoal-rgb), 0.06);
+  --shadow-md:  0 4px 20px rgba(var(--charcoal-rgb), 0.1);
+  --shadow-lg:  0 8px 40px rgba(var(--charcoal-rgb), 0.15);
+}
+
+/* --- CSS Reset --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--text-base);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: var(--line-height);
+  color: var(--aged-iron);
+  background-color: var(--warm-white);
+  overflow-x: hidden;
+}
+
+body.nav-open,
+body.modal-open {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* --- Base Typography --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--charcoal);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+h4 {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--copper);
+}
+
+.accent-text {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* --- Selection --- */
+::selection {
+  background-color: rgba(var(--copper-rgb), 0.2);
+  color: var(--charcoal);
+}
+
+/* --- Scrollbar (webkit) --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--parchment);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--creek-stone);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--aged-iron);
+}
+
+/* --- Skip Link (accessibility) --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--deep-moss);
+  color: white;
+  padding: var(--space-xs) var(--space-sm);
+  z-index: 10000;
+  font-size: var(--text-sm);
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --text-base: 16px;
+    --header-height: 64px;
+  }
+}

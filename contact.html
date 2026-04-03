@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | R.L. Simmons Builder</title>
+  <meta name="description" content="Schedule your no-cost consultation with R.L. Simmons Builder. Tell us about your custom home, remodel, or ranch construction project in the Texas Hill Country.">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/pages/contact.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html">R.L. Simmons<span class="wordmark-suffix">Builder</span></a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="nav-cta">Free Consultation</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero hero--shortest hero--parallax" style="background-image: url('images/hero/contact-hero.jpg'); background-color: var(--deep-moss);">
+      <div class="hero__overlay"></div>
+      <div class="hero__content container" style="text-align: center; max-width: 100%;">
+        <p class="eyebrow hero-animate hero-animate--1">Get Started</p>
+        <h1 class="hero-animate hero-animate--2" style="font-size: clamp(2rem, 4vw, 3.5rem);">Let's Build Something Together</h1>
+        <p class="hero-animate hero-animate--3">Schedule your no-cost consultation and tell us about your vision.</p>
+      </div>
+    </section>
+
+    <!-- Contact Form + Info -->
+    <section class="container">
+      <div class="contact-layout">
+
+        <!-- Form -->
+        <div class="reveal">
+          <h2 style="margin-bottom: var(--space-md);">Tell Us About Your Project</h2>
+
+          <form id="contact-form">
+            <!-- GHL integration: replace action with GHL form endpoint -->
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first_name" required>
+                <span class="form-error">Please enter your first name.</span>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last_name" required>
+                <span class="form-error">Please enter your last name.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+                <span class="form-error">Please enter a valid email address.</span>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="project-type">Project Type *</label>
+              <select id="project-type" name="project_type" required>
+                <option value="">Select a project type...</option>
+                <option value="new-build">New Custom Home Build</option>
+                <option value="remodel">Renovation / Remodel</option>
+                <option value="ranch-rural">Ranch &amp; Rural Construction</option>
+                <option value="land-development">Land Development Advisory</option>
+                <option value="conversion">Structure Conversion</option>
+                <option value="other">Other / Not Sure Yet</option>
+              </select>
+              <span class="form-error">Please select a project type.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell Us About Your Project *</label>
+              <textarea id="message" name="message" placeholder="Describe your vision, timeline, property details, or any questions you have..." required></textarea>
+              <span class="form-error">Please tell us about your project.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="referral">How Did You Hear About Us?</label>
+              <select id="referral" name="referral">
+                <option value="">Select one...</option>
+                <option value="referral">Friend / Referral</option>
+                <option value="google">Google Search</option>
+                <option value="social">Social Media</option>
+                <option value="drive-by">Saw Your Work</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg" style="margin-top: var(--space-sm); width: 100%;">Request Your Free Consultation</button>
+          </form>
+
+          <!-- Success Message -->
+          <div id="form-success" class="form-success" style="display: none;">
+            <h3>Thank You!</h3>
+            <p>We received your message and will be in touch shortly. Randy typically responds within one business day.</p>
+          </div>
+        </div>
+
+        <!-- Contact Info Card -->
+        <div class="contact-info-card reveal reveal-delay-1">
+          <h3>Get in Touch</h3>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <a href="tel:8303771923">(830) 377-1923</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:Randy@RLSimmonsBuilder.com">Randy@RLSimmonsBuilder.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Harper, Texas</span>
+            </li>
+          </ul>
+
+          <div class="contact-service-area">
+            <h4>Service Area</h4>
+            <p>Harper, Fredericksburg, Kerrville, Mason, Llano, Junction, and the greater Texas Hill Country region.</p>
+          </div>
+
+          <div class="map-placeholder">Map Coming Soon</div>
+
+          <div style="margin-top: var(--space-md);">
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">
+                <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/></svg>
+              </a>
+              <a href="#" aria-label="YouTube">
+                <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="section--moss expect-section">
+      <div class="container">
+        <div class="text-center reveal">
+          <p class="eyebrow" style="color: var(--copper-light);">What to Expect</p>
+          <h2 style="color: white; margin-top: 0.3em;">Three Simple Steps</h2>
+        </div>
+
+        <div class="expect-grid">
+          <div class="expect-step reveal reveal-delay-1">
+            <div class="step-number">01</div>
+            <h4 style="color: white;">We'll Talk</h4>
+            <p>Tell us about your vision, your property, and your goals. We will listen and ask the right questions.</p>
+          </div>
+          <div class="expect-step reveal reveal-delay-2">
+            <div class="step-number">02</div>
+            <h4 style="color: white;">We'll Visit Your Site</h4>
+            <p>Randy comes to see your land or property in person. There is no substitute for boots on the ground.</p>
+          </div>
+          <div class="expect-step reveal reveal-delay-3">
+            <div class="step-number">03</div>
+            <h4 style="color: white;">We'll Build Your Plan</h4>
+            <p>You receive a custom proposal and timeline tailored to your project, your land, and your budget.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-wordmark">R.L. Simmons <span>Builder</span></div>
+          <p class="footer-tagline">Premium custom homes and ranch construction in the Texas Hill Country.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 110 4 2 2 0 010-4z"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Randy</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <p>Harper, Fredericksburg, Kerrville, Mason, Llano, Junction, and the greater Texas Hill Country region.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <ul>
+            <li><a href="tel:8303771923">(830) 377-1923</a></li>
+            <li><a href="mailto:Randy@RLSimmonsBuilder.com">Randy@RLSimmonsBuilder.com</a></li>
+            <li>Harper, TX</li>
+          </ul>
+          <div style="margin-top: var(--space-sm);"><a href="contact.html" class="btn btn--primary btn--sm">Free Consultation</a></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 R.L. Simmons Builder LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

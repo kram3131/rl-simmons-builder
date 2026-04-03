@@ -1,0 +1,165 @@
+/* ============================================
+   R.L. SIMMONS BUILDER — Home Page
+   ============================================ */
+
+/* --- Question Scroll Section --- */
+.questions-scroll {
+  position: relative;
+  height: 350vh;
+  background: var(--charcoal);
+}
+
+.questions-scroll__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.questions-scroll__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+}
+
+.questions-scroll__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(var(--charcoal-rgb), 0.3) 0%,
+    rgba(var(--charcoal-rgb), 0.7) 100%
+  );
+}
+
+.question-item {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  z-index: 2;
+}
+
+.question-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.question-item__label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--copper-light);
+  margin-bottom: var(--space-sm);
+}
+
+.question-item__text {
+  font-family: var(--font-accent);
+  font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.5;
+  color: white;
+  max-width: 750px;
+}
+
+/* Final CTA question item */
+.question-item--cta .question-item__text {
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  margin-bottom: var(--space-md);
+}
+
+/* Scroll indicator at top of questions section */
+.questions-scroll__hint {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.5s ease;
+}
+
+.questions-scroll__hint span {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%      { transform: translateY(6px); opacity: 1; }
+}
+
+.questions-scroll__hint svg {
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* --- Featured Projects --- */
+.featured-projects {
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.featured-projects__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .featured-projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+
+  /* Asymmetric offset - middle card drops down */
+  .featured-projects__grid .card:nth-child(2) {
+    margin-top: 40px;
+  }
+}
+
+.featured-project-card .card__image {
+  aspect-ratio: 3 / 4;
+}
+
+.featured-project-card .placeholder-img {
+  height: 100%;
+}
+
+/* --- Trust Section --- */
+.trust-section {
+  padding: var(--space-xl) 0;
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
+}
+
+/* --- Home CTA Section --- */
+.home-cta {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
