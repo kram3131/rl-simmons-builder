@@ -223,6 +223,26 @@
   }
 }
 
+/* Video hero */
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.hero__overlay--video {
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--charcoal-rgb), 0.25) 0%,
+    rgba(var(--charcoal-rgb), 0.45) 40%,
+    rgba(var(--charcoal-rgb), 0.75) 100%
+  );
+}
+
 /* --- Decorative Divider --- */
 .divider {
   display: flex;
