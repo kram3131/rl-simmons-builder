@@ -1,2 +1,6 @@
 RL_Simmons_Website_Brief.pdf
 .claude/
+.vercel
+.DS_Store
+images/.DS_Store
+images/raw-downloads/
