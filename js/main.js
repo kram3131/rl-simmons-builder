@@ -106,6 +106,13 @@ function initQuestionScroll() {
   if (sticky) sticky.appendChild(dotsWrap);
   const dots = dotsWrap.querySelectorAll('.questions-dot');
 
+  // --- Build replay button ---
+  const replayBtn = document.createElement('button');
+  replayBtn.className = 'questions-replay';
+  replayBtn.setAttribute('aria-label', 'Watch questions again');
+  replayBtn.innerHTML = '↺ &nbsp;Watch again';
+  if (sticky) sticky.appendChild(replayBtn);
+
   // --- Show a specific item ---
   function showItem(index) {
     index = Math.max(0, Math.min(index, totalItems - 1));
@@ -114,7 +121,17 @@ function initQuestionScroll() {
     items[index].classList.add('visible');
     dots[index].classList.add('active');
     currentIndex = index;
+    // Show/hide replay button based on whether we're on the last item
+    replayBtn.classList.toggle('visible', index === totalItems - 1);
   }
+
+  // --- Replay: reset to first question and restart ---
+  replayBtn.addEventListener('click', () => {
+    replayBtn.classList.remove('visible');
+    scrollOverride = false;
+    showItem(0);
+    startTimer();
+  });
 
   // --- Auto-advance timer ---
   function startTimer() {
