@@ -84,51 +84,96 @@ function initQuestionScroll() {
   const wrapper = document.querySelector('.questions-scroll');
   if (!wrapper) return;
 
+  const sticky = wrapper.querySelector('.questions-scroll__sticky');
   const items = wrapper.querySelectorAll('.question-item');
   const hint = wrapper.querySelector('.questions-scroll__hint');
   if (!items.length) return;
 
   const totalItems = items.length;
+  const AUTO_INTERVAL = 3800; // ms per question
+  let currentIndex = 0;
+  let autoTimer = null;
+  let scrollOverride = false; // true when user is manually scrolling
 
+  // --- Build progress dots ---
+  const dotsWrap = document.createElement('div');
+  dotsWrap.className = 'questions-scroll__dots';
+  for (let i = 0; i < totalItems; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'questions-dot';
+    dotsWrap.appendChild(dot);
+  }
+  if (sticky) sticky.appendChild(dotsWrap);
+  const dots = dotsWrap.querySelectorAll('.questions-dot');
+
+  // --- Show a specific item ---
+  function showItem(index) {
+    index = Math.max(0, Math.min(index, totalItems - 1));
+    items.forEach(item => item.classList.remove('visible'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    items[index].classList.add('visible');
+    dots[index].classList.add('active');
+    currentIndex = index;
+  }
+
+  // --- Auto-advance timer ---
+  function startTimer() {
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => {
+      if (!scrollOverride && currentIndex < totalItems - 1) {
+        showItem(currentIndex + 1);
+      } else if (currentIndex >= totalItems - 1) {
+        clearInterval(autoTimer); // Stop at final CTA
+      }
+    }, AUTO_INTERVAL);
+  }
+
+  function stopTimer() {
+    clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  // --- Show first question immediately, hide scroll hint ---
+  showItem(0);
+  if (hint) hint.style.display = 'none';
+
+  // --- Start timer when section enters viewport ---
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startTimer();
+      } else {
+        stopTimer();
+      }
+    });
+  }, { threshold: 0.2 });
+  sectionObserver.observe(wrapper);
+
+  // --- Scroll also advances questions (lets fast scrollers skip ahead) ---
+  let scrollTimeout;
   function onScroll() {
     const wrapperRect = wrapper.getBoundingClientRect();
     const wrapperTop = -wrapperRect.top;
     const wrapperHeight = wrapper.offsetHeight - window.innerHeight;
-
-    if (wrapperTop < 0 || wrapperTop > wrapperHeight) {
-      items.forEach(item => item.classList.remove('visible'));
-      if (wrapperTop > wrapperHeight) {
-        // Past the section — keep last item visible
-        items[totalItems - 1].classList.add('visible');
-      }
-      return;
-    }
-
-    // Fade scroll hint once user starts scrolling into the section
-    if (hint) hint.style.opacity = wrapperTop > 60 ? '0' : '0.5';
+    if (wrapperTop < 0 || wrapperTop > wrapperHeight) return;
 
     const progress = wrapperTop / wrapperHeight;
-    const segmentSize = 1 / totalItems;
+    const scrollIndex = Math.min(Math.floor(progress * totalItems), totalItems - 1);
 
-    items.forEach((item, i) => {
-      const segmentStart = i * segmentSize;
-      const segmentEnd = (i + 1) * segmentSize;
-
-      // First question is visible immediately on section entry (no scroll required)
-      // All others appear early in their segment and stay visible through most of it
-      const segmentMid  = i === 0 ? 0 : segmentStart + segmentSize * 0.06;
-      const segmentFade = segmentEnd - segmentSize * 0.06;
-
-      if (progress >= segmentMid && progress <= segmentFade) {
-        item.classList.add('visible');
-      } else {
-        item.classList.remove('visible');
-      }
-    });
+    // If scroll is ahead of the timer, jump to that item
+    if (scrollIndex > currentIndex) {
+      scrollOverride = true;
+      showItem(scrollIndex);
+      // Resume auto-advance from this new position after a brief pause
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        scrollOverride = false;
+        startTimer();
+      }, 1200);
+    }
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // Run immediately so first question shows on section entry
 }
 
 /* ---- Form Validation ---- */

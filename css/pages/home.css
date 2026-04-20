@@ -87,7 +87,32 @@
   margin-bottom: var(--space-md);
 }
 
-/* Scroll indicator at top of questions section */
+/* Progress dots — replace scroll hint */
+.questions-scroll__dots {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.questions-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transition: background 0.4s ease, transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+.questions-dot.active {
+  background: var(--copper-light);
+  transform: scale(1.4);
+}
+
+/* Scroll hint — hidden by JS, kept for fallback */
 .questions-scroll__hint {
   position: absolute;
   bottom: var(--space-md);
