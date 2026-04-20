@@ -300,6 +300,61 @@ const projects = [
         { src: 'images/projects/harper-barndo/IMG_5150.jpg', ratio: '4/3' }
       ]
     }
+  },
+  {
+    id: 'harper-adobe-custom',
+    title: 'Harper Adobe Custom Home',
+    category: 'new-build',
+    categoryLabel: 'New Build',
+    description: 'A one-of-a-kind custom home built with adobe construction in Harper. Thick walls, natural materials, and deep Hill Country character — a project that required the kind of unconventional expertise most builders simply do not have.',
+    cover: 'images/projects/harper-adobe-custom/471434999_1137466027734401_n.jpg',
+    phases: {
+      after: [
+        { src: 'images/projects/harper-adobe-custom/471434999_1137466027734401_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/471504708_1137465977734406_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5118.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5119.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5120.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5121.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5122.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5123.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5124.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5125.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5129.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5131.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5132.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5133.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5134.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5135.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5136.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5137.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5138.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5139.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5140.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5141.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5142.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/107829896_184897622991251_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/107882318_184897656324581_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/108424499_184897596324587_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/89526710_147823620031985_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/171790745_303717607775918_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/171814783_303717661109246_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/172499372_303717624442583_n.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/1106A317-CA92-4307-BA33-6C86FF82593A.jpeg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/1D25D24D-84B4-4512-98FF-FD8A8AAFC75A.jpeg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/8902575A-04D8-41A5-96CE-B3D2CD4DDDF2.jpeg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/A9CC58A3-DAEF-4FD2-9869-31C7C03EE46A.jpeg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/C542AC17-730A-4B95-A040-9F25A9756F0A.jpeg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/CD6BDE48-4803-41A7-BA1D-651E68D80D98.jpeg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/E0FCA014-6A12-444B-BCBA-62F5DC0D76F1.jpeg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_3399.jpg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_3411.jpg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_3438.jpg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_3520.jpg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_3575.jpg.webp', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_4122.jpeg.webp', ratio: '4/3' }
+      ]
+    }
   }
 ];
 
