@@ -122,6 +122,9 @@
 }
 
 .wordmark {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 700;
@@ -131,11 +134,26 @@
   z-index: 1001;
 }
 
+.wordmark-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  /* Invert to white when over hero (default header state) */
+  filter: invert(1) brightness(2);
+  transition: filter 0.3s ease;
+}
+
 .wordmark-suffix {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.72);
   margin-left: 0.15em;
   transition: color 0.3s ease;
+}
+
+/* When header is scrolled, show icon in brand dark color */
+.header-scrolled .wordmark-icon {
+  filter: none;
 }
 
 /* Scrolled state */
