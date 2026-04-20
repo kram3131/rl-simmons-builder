@@ -59,12 +59,13 @@
 
 .question-item__label {
   font-family: var(--font-body);
-  font-size: var(--text-xs);
-  font-weight: 600;
+  font-size: var(--text-sm);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.28em;
   color: var(--copper-light);
   margin-bottom: var(--space-sm);
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
 
 .question-item__text {
@@ -147,6 +148,28 @@
 
 .featured-project-card .placeholder-img {
   height: 100%;
+}
+
+/* --- Testimonials Grid --- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonials-grid .pull-quote:first-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    padding-right: var(--space-xl);
+  }
+
+  .testimonials-grid .pull-quote:last-child {
+    padding-left: var(--space-xl);
+  }
 }
 
 /* --- Trust Section --- */

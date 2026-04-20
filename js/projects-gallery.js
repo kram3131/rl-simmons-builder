@@ -391,7 +391,7 @@ function initModal() {
     // Collapse all phases into one flat gallery, best photos first.
     // Tabs hidden until a project has a complete before/during/after set.
     phaseTabs.style.display = 'none';
-    const phaseOrder = ['after', 'during', 'before'];
+    const phaseOrder = ['before', 'during', 'after'];
     const allImages = phaseOrder
       .filter(p => project.phases[p])
       .flatMap(p => project.phases[p]);

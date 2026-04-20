@@ -84,8 +84,8 @@ function initQuestionScroll() {
   const wrapper = document.querySelector('.questions-scroll');
   if (!wrapper) return;
 
-  const sticky = wrapper.querySelector('.questions-scroll__sticky');
   const items = wrapper.querySelectorAll('.question-item');
+  const hint = wrapper.querySelector('.questions-scroll__hint');
   if (!items.length) return;
 
   const totalItems = items.length;
@@ -96,14 +96,16 @@ function initQuestionScroll() {
     const wrapperHeight = wrapper.offsetHeight - window.innerHeight;
 
     if (wrapperTop < 0 || wrapperTop > wrapperHeight) {
-      // Outside the scroll section
       items.forEach(item => item.classList.remove('visible'));
       if (wrapperTop > wrapperHeight) {
-        // Past the section - show last item
+        // Past the section — keep last item visible
         items[totalItems - 1].classList.add('visible');
       }
       return;
     }
+
+    // Fade scroll hint once user starts scrolling into the section
+    if (hint) hint.style.opacity = wrapperTop > 60 ? '0' : '0.5';
 
     const progress = wrapperTop / wrapperHeight;
     const segmentSize = 1 / totalItems;
@@ -111,8 +113,11 @@ function initQuestionScroll() {
     items.forEach((item, i) => {
       const segmentStart = i * segmentSize;
       const segmentEnd = (i + 1) * segmentSize;
-      const segmentMid = segmentStart + segmentSize * 0.15;
-      const segmentFade = segmentEnd - segmentSize * 0.15;
+
+      // First question is visible immediately on section entry (no scroll required)
+      // All others appear early in their segment and stay visible through most of it
+      const segmentMid  = i === 0 ? 0 : segmentStart + segmentSize * 0.06;
+      const segmentFade = segmentEnd - segmentSize * 0.06;
 
       if (progress >= segmentMid && progress <= segmentFade) {
         item.classList.add('visible');
@@ -123,7 +128,7 @@ function initQuestionScroll() {
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  onScroll(); // Run immediately so first question shows on section entry
 }
 
 /* ---- Form Validation ---- */
