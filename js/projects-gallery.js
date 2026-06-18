@@ -263,7 +263,7 @@ const projects = [
     category: 'remodel',
     categoryLabel: 'Remodel',
     description: 'A substantial Harper area home given a top-to-bottom refresh. Structural work combined with premium interior finishes across the entire property.',
-    cover: 'images/projects/harper-estate-remodel/IMG_3191.jpg',
+    cover: 'images/projects/harper-estate-remodel/IMG_3199.jpg',
     phases: {
       after: [
         { src: 'images/projects/harper-estate-remodel/IMG_3191.jpg', ratio: '4/3' },
