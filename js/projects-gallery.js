@@ -465,15 +465,30 @@ function renderProjectCards() {
 function initPageTabs() {
   const tabs = document.querySelectorAll('.page-tab');
   if (!tabs.length) return;
+
+  function activateTab(panelName) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.panel === panelName));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('tab-panel--active'));
+    const target = document.getElementById('panel-' + panelName);
+    if (target) target.classList.add('tab-panel--active');
+  }
+
+  // Read hash on load so direct links and back/forward work
+  function panelFromHash() {
+    const hash = location.hash.replace('#', '');
+    return hash === 'recent' ? 'recent' : 'gallery';
+  }
+
+  activateTab(panelFromHash());
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const panelId = 'panel-' + tab.dataset.panel;
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('tab-panel--active'));
-      const target = document.getElementById(panelId);
-      if (target) target.classList.add('tab-panel--active');
+      location.hash = tab.dataset.panel;
     });
+  });
+
+  window.addEventListener('hashchange', () => {
+    activateTab(panelFromHash());
   });
 }
 
