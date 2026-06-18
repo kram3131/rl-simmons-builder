@@ -50,18 +50,24 @@
     <section class="section section--lg">
       <div class="container">
 
-        <!-- Filter Tabs -->
-        <div class="filter-tabs">
-          <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="new-build">New Builds</button>
-          <button class="filter-tab" data-filter="remodel">Remodels</button>
-          <button class="filter-tab" data-filter="ranch-conversion">Ranch Conversions</button>
-          <button class="filter-tab" data-filter="land-development">Land Development</button>
+        <!-- Page Tabs -->
+        <div class="page-tabs">
+          <button class="page-tab active" data-panel="gallery">Photo Gallery</button>
+          <button class="page-tab" data-panel="recent">Recent Projects</button>
         </div>
 
-        <!-- Project Cards (rendered by JS) -->
-        <div class="projects-grid" id="projects-grid">
-          <!-- Cards injected by projects-gallery.js -->
+        <!-- Photo Gallery Panel -->
+        <div class="tab-panel tab-panel--active" id="panel-gallery">
+          <div class="photo-gallery" id="photo-gallery">
+            <!-- Injected by projects-gallery.js -->
+          </div>
+        </div>
+
+        <!-- Recent Projects Panel -->
+        <div class="tab-panel" id="panel-recent">
+          <div class="projects-grid recent-projects-grid" id="projects-grid">
+            <!-- Injected by projects-gallery.js -->
+          </div>
         </div>
 
       </div>

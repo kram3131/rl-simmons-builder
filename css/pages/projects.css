@@ -2,7 +2,100 @@
    R.L. SIMMONS BUILDER — Projects Page
    ============================================ */
 
-/* --- Filter Tabs --- */
+/* --- Page Tabs (Gallery vs Recent Projects) --- */
+.page-tabs {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+  border-bottom: 2px solid var(--creek-stone);
+}
+
+.page-tab {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.9em 2.8em;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  color: var(--creek-stone);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.page-tab:hover {
+  color: var(--aged-iron);
+}
+
+.page-tab.active {
+  color: var(--deep-moss);
+  border-bottom-color: var(--copper);
+}
+
+/* --- Tab Panels --- */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.tab-panel--active {
+  display: block;
+}
+
+/* --- Photo Gallery (masonry) --- */
+.photo-gallery {
+  column-count: 2;
+  column-gap: 8px;
+}
+
+@media (min-width: 640px) {
+  .photo-gallery {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .photo-gallery {
+    column-count: 4;
+  }
+}
+
+.photo-gallery__item {
+  break-inside: avoid;
+  margin-bottom: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 2px;
+  position: relative;
+}
+
+.photo-gallery__item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.photo-gallery__item:hover img {
+  transform: scale(1.04);
+}
+
+/* --- Recent Projects (3 featured) --- */
+.recent-projects-grid {
+  grid-template-columns: 1fr;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .recent-projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Filter Tabs (kept for legacy) --- */
 .filter-tabs {
   display: flex;
   flex-wrap: wrap;
