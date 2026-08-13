@@ -210,5 +210,8 @@ p:last-child {
   :root {
     --text-base: 16px;
     --header-height: 64px;
+    --space-lg:  2rem;
+    --space-xl:  3.5rem;
+    --space-2xl: 5rem;
   }
 }

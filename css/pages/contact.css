@@ -2,21 +2,105 @@
    R.L. SIMMONS BUILDER — Contact Page
    ============================================ */
 
-/* --- Contact Layout --- */
-.contact-layout {
-  display: grid;
-  grid-template-columns: 1fr;
+/* --- GHL Skeleton Loader --- */
+.ghl-skeleton {
+  padding: var(--space-md) 0;
+  min-height: 500px;
+}
+
+.ghl-skeleton__bar {
+  background: linear-gradient(90deg, var(--parchment) 25%, #e8e0d5 50%, var(--parchment) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s infinite;
+  border-radius: 2px;
+  margin-bottom: 1.2em;
+}
+
+.ghl-skeleton__bar--label {
+  height: 12px;
+  width: 120px;
+}
+
+.ghl-skeleton__bar--input {
+  height: 48px;
+  width: 100%;
+}
+
+.ghl-skeleton__bar--tall {
+  height: 120px;
+}
+
+.ghl-skeleton__bar--btn {
+  height: 52px;
+  width: 220px;
+  background: linear-gradient(90deg, #c8a882 25%, #d4b48e 50%, #c8a882 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s infinite;
+  margin-top: var(--space-sm);
+}
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* --- Contact Form Wrap --- */
+.contact-form-wrap {
+  padding: var(--space-xl) 0 var(--space-md);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* --- Contact Info Strip --- */
+.contact-info-strip {
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-lg);
-  padding: var(--space-xl) 0;
+  align-items: center;
+  padding: var(--space-lg) var(--space-md);
+  background: var(--parchment);
+  border-radius: 2px;
+  margin-bottom: var(--space-xl);
 }
 
-@media (min-width: 768px) {
-  .contact-layout {
-    grid-template-columns: 55% 1fr;
-  }
+.contact-info-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  flex: 1 1 180px;
 }
 
-/* --- Contact Info Card --- */
+.contact-info-strip__item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: var(--copper);
+  stroke-width: 2;
+  fill: none;
+}
+
+.contact-info-strip__label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--creek-stone);
+  margin-bottom: 0.15em;
+}
+
+.contact-info-strip__item a,
+.contact-info-strip__item span {
+  font-size: var(--text-base);
+  color: var(--aged-iron);
+}
+
+.contact-info-strip__item a:hover {
+  color: var(--copper);
+}
+
+/* --- Contact Info Card (legacy, kept for reference) --- */
 .contact-info-card {
   background: var(--parchment);
   padding: var(--space-lg);
@@ -74,19 +158,18 @@
   color: var(--creek-stone);
 }
 
-.map-placeholder {
+.map-embed {
   width: 100%;
-  height: 200px;
-  background: var(--limestone);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: var(--space-md);
   border-radius: 2px;
-  color: var(--creek-stone);
-  font-size: var(--text-sm);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  overflow: hidden;
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border: 0;
 }
 
 /* --- What to Expect --- */

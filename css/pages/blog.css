@@ -68,6 +68,29 @@
   overflow: hidden;
 }
 
+/* --- Press Card --- */
+.blog-post--press {
+  background: var(--parchment);
+  padding: var(--space-md);
+  border-radius: 2px;
+  border-left: 4px solid var(--copper);
+  margin-bottom: var(--space-lg);
+}
+
+.blog-post__press-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: white;
+  background: var(--copper);
+  padding: 0.2em 0.7em;
+  border-radius: 2px;
+  margin-bottom: 0.4em;
+}
+
 /* --- Sidebar --- */
 .blog-sidebar {
   height: fit-content;

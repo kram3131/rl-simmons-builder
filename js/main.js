@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
   initQuestionScroll();
   initFormValidation();
+  initGHLForm();
 });
 
 /* ---- Scroll Reveal (Intersection Observer) ---- */
@@ -191,6 +192,44 @@ function initQuestionScroll() {
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+/* ---- GHL Lazy Form Loader ---- */
+function initGHLForm() {
+  const wrap = document.querySelector('.contact-form-wrap');
+  if (!wrap) return;
+
+  const iframe = wrap.querySelector('iframe[data-src]');
+  const skeleton = document.getElementById('ghl-skeleton');
+  if (!iframe) return;
+
+  let loaded = false;
+
+  const observer = new IntersectionObserver((entries) => {
+    if (loaded || !entries[0].isIntersecting) return;
+    loaded = true;
+    observer.disconnect();
+
+    // Inject GHL embed script once
+    const script = document.createElement('script');
+    script.src = 'https://link.msgsndr.com/js/form_embed.js';
+    document.body.appendChild(script);
+
+    // Set src to trigger load
+    iframe.src = iframe.dataset.src;
+    iframe.style.display = 'block';
+
+    // Hide skeleton when iframe loads
+    iframe.addEventListener('load', () => {
+      if (skeleton) {
+        skeleton.style.transition = 'opacity 0.3s';
+        skeleton.style.opacity = '0';
+        setTimeout(() => { skeleton.style.display = 'none'; }, 300);
+      }
+    }, { once: true });
+  }, { rootMargin: '300px' });
+
+  observer.observe(wrap);
 }
 
 /* ---- Form Validation ---- */

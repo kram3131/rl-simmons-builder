@@ -25,6 +25,15 @@
   background: transparent;
   cursor: pointer;
   transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .page-tab {
+    padding: 0.9em 1.4em;
+    font-size: var(--text-xs);
+    letter-spacing: 0.08em;
+  }
 }
 
 .page-tab:hover {

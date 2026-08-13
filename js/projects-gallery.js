@@ -7,60 +7,48 @@
 const projects = [
   {
     id: 'harper-ranch-conversion',
-    title: 'Harper Ranch Conversion',
+    title: 'Harper Ranch Build',
     category: 'ranch-conversion',
-    categoryLabel: 'Ranch Conversion',
+    categoryLabel: 'Ranch Build',
     description: 'One of our most dramatic transformations. An existing ranch structure reimagined from the ground up — preserved character, elevated living. Stone walls, exposed beams, and custom finishes throughout.',
     cover: 'images/projects/harper-ranch-conversion/Harper Ranch Custom Conversion AFTER.jpg',
     phases: {
-      before: [
-        { src: 'images/projects/harper-ranch-conversion/IMG_3649.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4365.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4369.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4638.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4639.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4640.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4641.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4673.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4674.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4675.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4816.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4817.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4818.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4819.jpg', ratio: '4/3' }
-      ],
-      during: [
-        { src: 'images/projects/harper-ranch-conversion/IMG_0015.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_0016.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_0017.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_0018.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_0019.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_0020.jpg', ratio: '4/3' }
-      ],
       after: [
-        { src: 'images/projects/harper-ranch-conversion/Harper Ranch Custom Conversion AFTER.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4927.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4928.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4937.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-ranch-conversion/IMG_4938.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4939.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-ranch-conversion/IMG_4940.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4941.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4942.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4974.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-ranch-conversion/IMG_4975.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4976.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4977.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4978.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4979.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_4818.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_4819.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_4638.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-ranch-conversion/IMG_4980.jpg', ratio: '4/3' },
-        { src: 'images/projects/harper-ranch-conversion/IMG_4981.jpg', ratio: '4/3' }
+        { src: 'images/projects/harper-ranch-conversion/IMG_4928.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_0015.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_0018.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_0019.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_0503.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_5437.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_5450.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6026.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6027.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6028.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6029.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6030.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6031.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6032.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6034.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6035.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6058.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6060.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6061.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6065.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6066.jpeg', ratio: '4/3' },
+        { src: 'images/projects/harper-ranch-conversion/IMG_6068.jpeg', ratio: '4/3' }
       ]
     }
   },
   {
     id: 'harper-adobe-custom',
-    title: 'Harper Adobe Custom Home',
+    title: 'Por Vida Build',
     category: 'new-build',
     categoryLabel: 'New Build',
     description: 'A one-of-a-kind custom home built with adobe construction in Harper. Thick walls, natural materials, and deep Hill Country character — a project that required the kind of unconventional expertise most builders simply do not have.',
@@ -77,6 +65,7 @@ const projects = [
         { src: 'images/projects/harper-adobe-custom/IMG_5123.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-adobe-custom/IMG_5124.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-adobe-custom/IMG_5125.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-adobe-custom/IMG_5126.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-adobe-custom/IMG_5129.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-adobe-custom/IMG_5131.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-adobe-custom/IMG_5132.jpg', ratio: '4/3' },
@@ -215,9 +204,9 @@ const projects = [
   },
   {
     id: 'harper-white-house',
-    title: 'Harper White House Remodel',
-    category: 'remodel',
-    categoryLabel: 'Remodel',
+    title: 'White House Build',
+    category: 'new-build',
+    categoryLabel: 'New Build',
     description: 'A Harper property given new life. Structural updates, interior overhaul, and exterior refinement — while keeping the character that made the original worth saving.',
     cover: 'images/projects/harper-white-house/IMG_0524.jpg',
     phases: {
@@ -228,11 +217,13 @@ const projects = [
         { src: 'images/projects/harper-white-house/IMG_0529.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_0531.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_0532.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-white-house/IMG_0534.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_0535.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_0536.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_0537.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_0538.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_0539.jpg', ratio: '4/3' },
+        { src: 'images/projects/harper-white-house/IMG_1111.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_2129.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_2130.jpg', ratio: '4/3' },
         { src: 'images/projects/harper-white-house/IMG_2131.jpg', ratio: '4/3' },
@@ -402,11 +393,99 @@ const galleryImages = [
   CDN + '0eda3d82-7b24-4ae4-b75b-4bc28b2fa33b/A1DE618B-C8BC-423C-BB4D-312F3096BBD1.jpeg',
   CDN + 'f9ab948d-d2cb-4347-886d-096d875e04b1/9B82E57A-DB57-4371-BF6B-B075B0A4E858.jpeg',
   CDN + '858a92d0-29de-4fbb-961d-93df9610a40d/F5011FAD-566B-4F16-881F-15EB1127CA6B.jpeg',
-  CDN + 'b1e8ea21-2bc7-4f56-9ea3-f0e5568ba41f/3E2FEEFA-12C9-4587-8130-B3B33FCFBB6A.jpeg'
+  CDN + 'b1e8ea21-2bc7-4f56-9ea3-f0e5568ba41f/3E2FEEFA-12C9-4587-8130-B3B33FCFBB6A.jpeg',
+
+  // Harper Ranch Build — 8 selected + Dropbox additions
+  'images/projects/harper-ranch-conversion/IMG_4938.jpg',
+  'images/projects/harper-ranch-conversion/IMG_4940.jpg',
+  'images/projects/harper-ranch-conversion/IMG_4975.jpg',
+  'images/projects/harper-ranch-conversion/IMG_4818.jpg',
+  'images/projects/harper-ranch-conversion/IMG_4819.jpg',
+  'images/projects/harper-ranch-conversion/IMG_4638.jpg',
+  'images/projects/harper-ranch-conversion/IMG_4980.jpg',
+  'images/projects/harper-ranch-conversion/IMG_4928.jpg',
+  'images/projects/harper-ranch-conversion/IMG_0015.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_0018.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_0019.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_0503.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_5437.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_5450.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6026.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6027.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6028.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6029.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6030.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6031.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6032.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6034.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6035.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6058.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6060.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6061.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6065.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6066.jpeg',
+  'images/projects/harper-ranch-conversion/IMG_6068.jpeg',
+
+  // Turtle Creek II — not in CDN (3411 already there)
+  'images/projects/turtle-creek-custom-2/IMG_3412.jpg',
+  'images/projects/turtle-creek-custom-2/IMG_3413.jpg',
+  'images/projects/turtle-creek-custom-2/IMG_3414.jpg',
+
+  // Harper Estate — 5 selected photos
+  'images/projects/harper-estate-remodel/IMG_3196.jpg',
+  'images/projects/harper-estate-remodel/IMG_3197.jpg',
+  'images/projects/harper-estate-remodel/IMG_3198.jpg',
+  'images/projects/harper-estate-remodel/IMG_3199.jpg',
+  'images/projects/harper-estate-remodel/IMG_3204.jpg',
+
+  // White House Build — all photos
+  'images/projects/harper-white-house/IMG_0524.jpg',
+  'images/projects/harper-white-house/IMG_0525.jpg',
+  'images/projects/harper-white-house/IMG_0528.jpg',
+  'images/projects/harper-white-house/IMG_0529.jpg',
+  'images/projects/harper-white-house/IMG_0531.jpg',
+  'images/projects/harper-white-house/IMG_0532.jpg',
+  'images/projects/harper-white-house/IMG_0534.jpg',
+  'images/projects/harper-white-house/IMG_0535.jpg',
+  'images/projects/harper-white-house/IMG_0536.jpg',
+  'images/projects/harper-white-house/IMG_0537.jpg',
+  'images/projects/harper-white-house/IMG_0538.jpg',
+  'images/projects/harper-white-house/IMG_0539.jpg',
+  'images/projects/harper-white-house/IMG_1111.jpg',
+  'images/projects/harper-white-house/IMG_2129.jpg',
+  'images/projects/harper-white-house/IMG_2130.jpg',
+  'images/projects/harper-white-house/IMG_2131.jpg',
+  'images/projects/harper-white-house/IMG_2132.jpg',
+  'images/projects/harper-white-house/IMG_2133.jpg',
+  'images/projects/harper-white-house/IMG_2134.jpg',
+
+  // Por Vida Build — JPG files (webp versions already in CDN above)
+  'images/projects/harper-adobe-custom/IMG_5118.jpg',
+  'images/projects/harper-adobe-custom/IMG_5119.jpg',
+  'images/projects/harper-adobe-custom/IMG_5120.jpg',
+  'images/projects/harper-adobe-custom/IMG_5121.jpg',
+  'images/projects/harper-adobe-custom/IMG_5122.jpg',
+  'images/projects/harper-adobe-custom/IMG_5123.jpg',
+  'images/projects/harper-adobe-custom/IMG_5124.jpg',
+  'images/projects/harper-adobe-custom/IMG_5125.jpg',
+  'images/projects/harper-adobe-custom/IMG_5126.jpg',
+  'images/projects/harper-adobe-custom/IMG_5129.jpg',
+  'images/projects/harper-adobe-custom/IMG_5131.jpg',
+  'images/projects/harper-adobe-custom/IMG_5132.jpg',
+  'images/projects/harper-adobe-custom/IMG_5133.jpg',
+  'images/projects/harper-adobe-custom/IMG_5134.jpg',
+  'images/projects/harper-adobe-custom/IMG_5135.jpg',
+  'images/projects/harper-adobe-custom/IMG_5136.jpg',
+  'images/projects/harper-adobe-custom/IMG_5137.jpg',
+  'images/projects/harper-adobe-custom/IMG_5138.jpg',
+  'images/projects/harper-adobe-custom/IMG_5139.jpg',
+  'images/projects/harper-adobe-custom/IMG_5140.jpg',
+  'images/projects/harper-adobe-custom/IMG_5141.jpg',
+  'images/projects/harper-adobe-custom/IMG_5142.jpg'
 ];
 
 // ---- Featured Projects for Recent Projects tab ----
-const FEATURED_IDS = ['harper-ranch-conversion', 'turtle-creek-custom-2', 'harper-estate-remodel'];
+const FEATURED_IDS = ['harper-ranch-conversion', 'harper-white-house', 'harper-adobe-custom'];
 
 // ---- DOM Ready ----
 document.addEventListener('DOMContentLoaded', () => {
@@ -421,10 +500,13 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderPhotoGallery() {
   const container = document.getElementById('photo-gallery');
   if (!container) return;
-  container.innerHTML = galleryImages.map((src, i) => `
+  container.innerHTML = galleryImages.map((src, i) => {
+    const thumbSrc = src.startsWith('http') ? src + '?format=750w' : src;
+    return `
     <div class="photo-gallery__item" data-gallery-index="${i}">
-      <img src="${src}?format=750w" alt="Project photo" loading="lazy">
-    </div>`).join('');
+      <img src="${thumbSrc}" alt="Project photo" loading="lazy">
+    </div>`;
+  }).join('');
 }
 
 // ---- Render Project Cards (featured only) ----
