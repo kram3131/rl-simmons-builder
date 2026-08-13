@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    { "source": "/about", "destination": "/about.html", "permanent": true },
+    { "source": "/our-team-1", "destination": "/about.html", "permanent": true },
+    { "source": "/gallery", "destination": "/projects.html", "permanent": true },
+    { "source": "/scope-of-work", "destination": "/services.html", "permanent": true },
+    { "source": "/contact-us-1", "destination": "/contact.html", "permanent": true },
+    { "source": "/blog-1", "destination": "/blog.html", "permanent": true },
+    { "source": "/reviews", "destination": "/", "permanent": true },
+    { "source": "/cart", "destination": "/", "permanent": true }
+  ]
+}
